@@ -1,18 +1,11 @@
 defmodule Brokelixir do
-  @moduledoc """
-  Documentation for Brokelixir.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Brokelixir.hello()
-      :world
-
-  """
-  def hello do
-    :world
+  def break(path) do
+    try do
+      path
+      |> Xlsxir.stream_list(0, [])
+      |> Stream.run()
+    rescue
+      _ -> nil
+    end
   end
 end

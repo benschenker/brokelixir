@@ -3,6 +3,7 @@ defmodule BrokelixirTest do
   doctest Brokelixir
 
   test "greets the world" do
-    assert Brokelixir.hello() == :world
+    path = "./test/does_not_parse.xlsx"
+    Brokelixir.break(path)
   end
 end
